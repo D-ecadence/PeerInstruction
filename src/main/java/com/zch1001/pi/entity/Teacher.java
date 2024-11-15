@@ -3,22 +3,23 @@ package com.zch1001.pi.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity  // 标记为实体类
+@Entity
 public class Teacher {
 
-    @Id  // 主键字段
-    private Long id;
+    @Id
+    private int id;
 
     private String name;
 
     private String email;
 
-    // Getter 和 Setter 方法
-    public Long getId() {
+    private String avatar;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -36,5 +37,13 @@ public class Teacher {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getAvatar() {
+        return avatar;
     }
 }
