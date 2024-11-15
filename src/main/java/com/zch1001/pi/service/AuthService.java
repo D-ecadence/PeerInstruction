@@ -3,15 +3,12 @@ package com.zch1001.pi.service;
 import com.zch1001.pi.entity.Admin;
 import com.zch1001.pi.entity.Student;
 import com.zch1001.pi.entity.Teacher;
-import com.zch1001.pi.model.RegisterRequest;
-import com.zch1001.pi.model.RegisterResponse;
+import com.zch1001.pi.model.*;
 import com.zch1001.pi.repository.AdminRepository;
 import com.zch1001.pi.repository.StudentRepository;
 import com.zch1001.pi.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.zch1001.pi.model.LoginRequest;
-import com.zch1001.pi.model.LoginResponse;
 
 @Service
 public class AuthService {
@@ -119,5 +116,15 @@ public class AuthService {
              registerResponse.setData(userData);
          }
          return registerResponse;
+     }
+
+     public EmailVerifyResponse emailVerify(EmailVerifyRequest emailVerifyRequest) {
+        EmailVerifyResponse emailVerifyResponse = new EmailVerifyResponse();
+        return emailVerifyResponse;
+     }
+
+     public ModifyPasswordResponse modifyPassword(ModifyPasswordRequest modifyPasswordRequest) {
+        ModifyPasswordResponse modifyPasswordResponse = new ModifyPasswordResponse();
+        return modifyPasswordResponse;
      }
 }
